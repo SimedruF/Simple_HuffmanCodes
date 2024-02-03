@@ -11,7 +11,8 @@ struct MinHeapNode
 {
     char data;
     unsigned freq;
-    struct MinHeapNode *left, *right;
+    struct MinHeapNode *left;
+    struct MinHeapNode *right;
 };
 
 struct MinHeap
@@ -107,6 +108,7 @@ void printArr(int arr[], int n)
     printf("\n");
     sprintf(result + strlen(result), "\n", arr[i]);
 }
+
 int isLeaf(struct MinHeapNode *root)
 {
     return !(root->left) && !(root->right);
